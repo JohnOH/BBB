@@ -27,7 +27,7 @@ holding the boot button apply power to the BBB.
 The micro SD contents will be transferred to the eMMC, when all the LED's adjacent to the 
 USB connector are illuminated power off the BBB and remove the micro SD.
 
-Apply power to the BBB, it should boot from the built in eMMC memory. 
+Apply power to the BBB, it should boot from the built-in eMMC memory. 
 
 Log in the the BBB using the following credentials:
 Default user: ubuntu pass: temppwd
