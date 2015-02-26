@@ -1,0 +1,39 @@
+Under Windoes 7:
+
+Get prebuilt image:
+
+wget https://rcn-ee.net/rootfs/2015-02-19/ubuntu-14.04.2-console-armhf-2015-02-19.tar.xz
+Verify Image with:
+
+md5sum ubuntu-14.04.2-console-armhf-2015-02-19.tar.xz
+2621ee08f9476534df01a4d6013e6f7d  ubuntu-14.04.2-console-armhf-2015-02-19.tar.xz
+
+from:
+http://elinux.org/BeagleBoardUbuntu
+
+Opened up the tar.xz file with 7zip http://www.7-zip.org/
+and extracted the image file.
+
+Using Win32DiskImager-0.9.5-install installed from http://sourceforge.net/projects/win32diskimager/files/latest/download
+write the extracted image BBB-eMMC-flasher-ubuntu-14.04.2-console-armhf-2015-02-19-2gb.img
+to a 2GB micro SD card. 
+
+This process will overwrite the eMMC storage on the Beaglebone Black (BBB).
+http://beagleboard.org/getting-started
+
+with the BBB powered down install the micro SD card into the BBB then while 
+holding the boot button apply power to the BBB. 
+
+The micro SD contents will be transferred to the eMMC, when all the LED's adjacent to the 
+USB connector are illuminated power off the BBB and remove the micro SD.
+
+Apply power to the BBB, it should boot from the built in eMMC memory. 
+
+Log in the the BBB using the following credentials:
+Default user: ubuntu pass: temppwd
+
+  sudo service dnsmasq stop
+  sudo apt-get update
+  sudo apt-get dist-upgrade
+  passwd
+  
